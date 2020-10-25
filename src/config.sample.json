@@ -1,0 +1,13 @@
+{
+	"MemberUsername":         "joeblow",
+	"MemberPassword":         "joeblowPass",
+	"GymBaseURL":             "https://www.goldsgym.com",
+    "GymClassesPath":         "/classes",
+    "GymLoginPath":           "/login",
+    "GymFormSelector":        "form#form[action='/classes']",
+    "EmailOAuthClientID":     "---- client id ----",
+    "EmailOAuthClientSecret": "---- client secret ----",
+	"EmailOAuthAccessToken":  "---- access token ----",
+    "EmailOAuthRefreshToken": "---- refresh token ----",
+    "EmailToUser": "joeblow@gmail.com"
+}
