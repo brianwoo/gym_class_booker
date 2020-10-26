@@ -60,8 +60,6 @@ func (gc *GymClass) GetTimestamp() string {
 
 func (gc *GymClass) SetAvailableFromStatus(status string) {
 
-	//fmt.Println(status)
-
 	if status == "Online Booking Closed" || status == "Too Late for Booking" || gc.numOfSpots == 0 {
 		gc.isAvailable = false
 	} else {
@@ -138,11 +136,6 @@ type GymClasses []GymClass
 
 func (gcs GymClasses) FilterClasses(timeFilter, titleFilter string) GymClasses {
 
-	// var r *regexp.Regexp
-	// if len(titleFilter) > 0 {
-	// 	regexpStr := fmt.Sprintf("(?i)%s", titleFilter)
-	// 	r, _ = regexp.Compile(regexpStr)
-	// }
 	r, titleStrRegexErr := helpers.GetRegexFromSearchStr(titleFilter)
 
 	filteredClasses := make(GymClasses, 0)
