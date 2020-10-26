@@ -9,5 +9,6 @@
     "EmailOAuthClientSecret": "---- client secret ----",
 	"EmailOAuthAccessToken":  "---- access token ----",
     "EmailOAuthRefreshToken": "---- refresh token ----",
-    "EmailToUser": "joeblow@gmail.com"
+    "EmailToUser": "joeblow@gmail.com",
+    "Location": "America/New_York"
 }

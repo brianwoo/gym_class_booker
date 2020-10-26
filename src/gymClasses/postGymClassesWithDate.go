@@ -104,6 +104,7 @@ func PostClassesWithDate(epochTimestamp string, hiddenIds map[string]string, con
 	}
 
 	payload := getPayload(epochTimestamp, hiddenIds)
+	//log.Println("Payload:", payload)
 	err := c.Post(config.GetClassesURL(), payload)
 	if err != nil {
 		fmt.Println(err)

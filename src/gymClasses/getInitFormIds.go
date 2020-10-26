@@ -47,6 +47,6 @@ func GetInitFormIdsFromClasses(config *config.Config, cookies []*http.Cookie) (m
 		return nil, err
 	}
 
-	//fmt.Println("End of method", hiddenInputElems)
+	//log.Println("End of method", hiddenInputElems)
 	return hiddenInputElems, nil
 }

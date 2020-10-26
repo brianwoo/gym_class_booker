@@ -6,6 +6,7 @@ require (
 	cloud.google.com/go v0.70.0 // indirect
 	github.com/PuerkitoBio/goquery v1.6.0
 	github.com/antchfx/xmlquery v1.3.3 // indirect
+	github.com/brianwoo/gogmail v0.0.0-20201026023739-0aa18c4dcc9c
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/gocolly/colly v1.2.0
 	github.com/gocolly/colly/v2 v2.1.0 // indirect

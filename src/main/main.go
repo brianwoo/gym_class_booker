@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/brianwoo/gogmail"
 	"gymclassbooker.com/bwoo/config"
 	"gymclassbooker.com/bwoo/gymClasses"
 	"gymclassbooker.com/bwoo/helpers"
-	"gymclassbooker.com/bwoo/sendEmail"
 )
 
 const programName = "gymClassBooker"
@@ -154,7 +154,7 @@ func bookClassAndEmail(year, month, date, time, title string, config *config.Con
 
 func sendEmailToUser(to, subject, emailBody string, config *config.Config) error {
 
-	sendEmail := sendEmail.NewSendMail(config.EmailOAuthClientID,
+	sendEmail := gogmail.NewSendMail(config.EmailOAuthClientID,
 		config.EmailOAuthClientSecret,
 		config.EmailOAuthAccessToken,
 		config.EmailOAuthRefreshToken)
@@ -243,7 +243,7 @@ func getClasses(year, month, date, timeFilter, titleFilter string, config *confi
 		return nil, err
 	}
 
-	epochTimestamp, err := helpers.GetEpochTimestamp(year, month, date)
+	epochTimestamp, err := helpers.GetEpochTimestamp(year, month, date, config.Location)
 	if err != nil {
 		return nil, err
 	}

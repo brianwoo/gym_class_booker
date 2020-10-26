@@ -12,6 +12,7 @@ type Config struct {
 	EmailOAuthAccessToken  string
 	EmailOAuthRefreshToken string
 	EmailToUser            string
+	Location               string
 }
 
 func (c *Config) GetClassesURL() string {
